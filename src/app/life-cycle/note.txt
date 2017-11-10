@@ -1,0 +1,72 @@
+Ref:	https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html
+	
+Lifecycle Hooks
+	Dev có thể dựa vào các hook trong lifecycle để đưa vào các xử lý phù hợp
+
+	Ví dụ trên đường đi làm của 1 cô gái sẽ ghé qua
+
+	Ra khỏi nhà --> công ty --> về nhà
+
+	Địa điểm 				Gián điệp			Cách dụ dỗ
+	- Quán ăn sáng			Bà bún bò			nhờ dùng điện thoại điện đến số máy của mình
+	- Quán cà phê			Tiếp viên			xin facebook
+	- Công sở
+	- Ghé siêu thị			Trực Tiếp			Đụng tay/chân
+
+
+	Địa điểm (Hook)	-> Gián điệp (Interface) -> Cách dụ dỗ (hook method)
+
+	
+
+Lifecycle Hooks áp dụng cho Directive, Component,
+
+
+hook method 	Interface
+ngOnChanges 	OnChanges 
+ngOnInit 		OnInit
+...
+
+
+ngAfterContent 				vs 		ngAfterView
+ng-content								template + ChildComponent
+Use ContentChild						Use ViewChild
+
+Chúng ta có cần dùng tất cả các gián điệp hay không --> Không --> Directive, Component cũng ko cần phải sử dụng đầy đủ các hook
+
+============================================================
+
+Lifecycle Hooks
+
++ constructor		
+	gọi đầu tiên trước tất cả các lifecycle hook, tiêm vào các DI
++ ngOnChanges
+	Xử lý khi Input có sự thay đổi (SimpleChange)
++ ngOnInit 			
+	Initialize
++ ngDoCheck
++ ngOnDestroy 		
+	clean the component
++ ngAfterContentInit
+	after component content initialized
++ ngAfterContentChecked
+	after every check of component content
+
+============================================================
+
+
+
++ ngAfterViewInit
+	 // Component views are initialized
++ ngAfterViewChecked
+	// Component views have been checked
++ ngOnDestroy
+	khi component bị phá hủy lace to clean the component — for example, to cancel background tasks.
+
+ngAfterContentInit	
+After Angular projects external content into its view.
+ngAfterContentChecked	
+After Angular checks the bindings of the external content that it projected into its view.
+ngAfterViewInit	
+After Angular creates the component's view(s).
+ngAfterViewChecked	
+After Angular checks the bindings of the component's view(s).
