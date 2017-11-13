@@ -17,7 +17,9 @@ import { Component } from '@angular/core';
       </div>
 
       <div class="panel-footer">
-        <button (click)="show = false" type="button" class="btn btn-success">Destroy</button>
+        <!--<button (click)="show = false" type="button" class="btn btn-success">Destroy</button> -->
+        <button (click)="value1 = '456' " type="button" class="btn btn-info">Change value 1 </button>
+        <button (click)="value1 = '234' ; value2 ='456' " type="button" class="btn btn-danger">Change value1 & 2</button>
       </div>
 		</div>
 	`

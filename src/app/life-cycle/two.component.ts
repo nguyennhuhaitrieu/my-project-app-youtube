@@ -1,9 +1,10 @@
-import { Component, OnInit, Input, DoCheck } from '@angular/core';
+import { Component, OnInit, Input, DoCheck, SimpleChanges,SimpleChange } from '@angular/core';
 
 @Component({
 	moduleId: module.id,
 	selector: 'zvn-lifecycle-two',
-	template: `
+  template: `
+    <h3>{{ distance }}</h3>
     <ul class="list">
       <li *ngFor="let hook of hooks">
         {{ hook }}
@@ -14,6 +15,7 @@ import { Component, OnInit, Input, DoCheck } from '@angular/core';
 
 export class TwoComponent implements OnInit, DoCheck {
   hooks: string[] = [];
+  distance: number = 0 ;
 
   @Input('value1') value1: string;
   @Input('value2') value2: string;
@@ -21,6 +23,15 @@ export class TwoComponent implements OnInit, DoCheck {
 
 	constructor() {
     this.hooks.push("contructor");
+  }
+
+  ngOnChanges(simple: SimpleChanges) {
+    console.log(simple);
+    this.hooks.push("ngOnChanges");
+    let tmpObj: SimpleChange = simple['value1'];
+    if(!tmpObj.isFirstChange()) {
+      this.distance = parseInt(tmpObj.currentValue) - parseInt(tmpObj.previousValue);
+    }
   }
 
   ngOnInit () {
