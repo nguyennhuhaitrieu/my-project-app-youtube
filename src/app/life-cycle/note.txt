@@ -1,5 +1,5 @@
 Ref:	https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html
-	
+
 Lifecycle Hooks
 	Dev có thể dựa vào các hook trong lifecycle để đưa vào các xử lý phù hợp
 
@@ -16,13 +16,13 @@ Lifecycle Hooks
 
 	Địa điểm (Hook)	-> Gián điệp (Interface) -> Cách dụ dỗ (hook method)
 
-	
+
 
 Lifecycle Hooks áp dụng cho Directive, Component,
 
 
 hook method 	Interface
-ngOnChanges 	OnChanges 
+ngOnChanges 	OnChanges
 ngOnInit 		OnInit
 ...
 
@@ -37,14 +37,14 @@ Chúng ta có cần dùng tất cả các gián điệp hay không --> Không --
 
 Lifecycle Hooks
 
-+ constructor		
++ constructor
 	gọi đầu tiên trước tất cả các lifecycle hook, tiêm vào các DI
 + ngOnChanges
 	Xử lý khi Input có sự thay đổi (SimpleChange)
-+ ngOnInit 			
++ ngOnInit
 	Initialize
 + ngDoCheck
-+ ngOnDestroy 		
++ ngOnDestroy
 	clean the component
 + ngAfterContentInit
 	after component content initialized
@@ -53,8 +53,6 @@ Lifecycle Hooks
 
 ============================================================
 
-
-
 + ngAfterViewInit
 	 // Component views are initialized
 + ngAfterViewChecked
@@ -62,11 +60,11 @@ Lifecycle Hooks
 + ngOnDestroy
 	khi component bị phá hủy lace to clean the component — for example, to cancel background tasks.
 
-ngAfterContentInit	
+ngAfterContentInit
 After Angular projects external content into its view.
-ngAfterContentChecked	
+ngAfterContentChecked
 After Angular checks the bindings of the external content that it projected into its view.
-ngAfterViewInit	
+ngAfterViewInit
 After Angular creates the component's view(s).
-ngAfterViewChecked	
+ngAfterViewChecked
 After Angular checks the bindings of the component's view(s).

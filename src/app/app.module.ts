@@ -8,6 +8,9 @@ import { TwoComponent } from './life-cycle/two.component';
 import { NgContentMainComponent } from './ng-content/ng-content-main.component';
 import { NgContentChildOneComponent } from './ng-content/ng-content-child-one.component';
 import { NgContentChildTwoComponent } from './ng-content/ng-content-child-two.component';
+import { HelloServiceOneComponent } from './hello-service/hello-service-one.component';
+import { HelloServiceTwoComponent } from './hello-service/hello-service-two.component';
+import { LogService } from './services/log.service';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,15 @@ import { NgContentChildTwoComponent } from './ng-content/ng-content-child-two.co
     TwoComponent,
     NgContentMainComponent,
     NgContentChildOneComponent,
-    NgContentChildTwoComponent
+    NgContentChildTwoComponent,
+    HelloServiceOneComponent,
+    HelloServiceOneComponent,
+    HelloServiceTwoComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
