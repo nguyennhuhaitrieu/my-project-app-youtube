@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, DoCheck, SimpleChanges,SimpleChange } from '@angular/core';
+import { Component, OnInit, Input, DoCheck, SimpleChanges, SimpleChange } from '@angular/core';
 
 @Component({
 	moduleId: module.id,
