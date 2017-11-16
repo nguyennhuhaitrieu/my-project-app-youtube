@@ -12,6 +12,8 @@ import { HelloServiceOneComponent } from './hello-service/hello-service-one.comp
 import { HelloServiceTwoComponent } from './hello-service/hello-service-two.component';
 import { LogService } from './services/log.service';
 
+import { CourseComponent } from './course-services/course.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { LogService } from './services/log.service';
     NgContentChildTwoComponent,
     HelloServiceOneComponent,
     HelloServiceOneComponent,
-    HelloServiceTwoComponent
+    HelloServiceTwoComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule
